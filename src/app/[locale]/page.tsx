@@ -1,4 +1,4 @@
-import { HeroSection } from "@/components/home/HeroSection";
+import { HeroWithLoader } from "@/components/home/HeroWithLoader";
 import { TrustBanner } from "@/components/home/TrustBanner";
 import { FeaturedSalons } from "@/components/home/FeaturedSalons";
 import { WhyUs } from "@/components/home/WhyUs";
@@ -19,7 +19,7 @@ export default async function HomePage() {
 
   return (
     <>
-      <HeroSection />
+      <HeroWithLoader />
       <TrustBanner />
       <FeaturedSalons salons={featured} />
       <WhyUs />
