@@ -33,11 +33,15 @@ export function useLotusScene(
     const isMobile = window.innerWidth < 768;
     const count = isMobile ? Math.min(particleCount, 1200) : particleCount;
 
+    const initW = canvas.clientWidth;
+    const initH = canvas.clientHeight || canvas.clientWidth;
+    if (initW === 0) return;
+
     // ── Scene ──────────────────────────────────────────────
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
       60,
-      canvas.clientWidth / (canvas.clientHeight || canvas.clientWidth),
+      initW / initH,
       0.1,
       100
     );
@@ -49,7 +53,7 @@ export function useLotusScene(
       antialias: !isMobile,
     });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    renderer.setSize(canvas.clientWidth, canvas.clientHeight || canvas.clientWidth, false);
+    renderer.setSize(initW, initH, false);
 
     // ── Lotus particles ─────────────────────────────────────
     const positions = new Float32Array(count * 3);
@@ -139,7 +143,7 @@ export function useLotusScene(
     ro.observe(canvas);
 
     // ── Animation loop ──────────────────────────────────────
-    let rafId: number;
+    let rafId = 0;
     const animate = () => {
       rafId = requestAnimationFrame(animate);
       lotusPoints.rotation.z += 0.001;
@@ -163,9 +167,10 @@ export function useLotusScene(
       geo.dispose();
       mat.dispose();
       torusGroup.children.forEach((child) => {
-        const mesh = child as THREE.Mesh;
-        mesh.geometry.dispose();
-        (mesh.material as THREE.Material).dispose();
+        if (child instanceof THREE.Mesh) {
+          child.geometry.dispose();
+          (child.material as THREE.Material).dispose();
+        }
       });
       renderer.dispose();
     };
