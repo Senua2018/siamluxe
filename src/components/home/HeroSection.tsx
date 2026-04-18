@@ -1,6 +1,5 @@
 "use client";
 
-import { useRef } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { motion, type Transition } from "framer-motion";
@@ -12,26 +11,26 @@ const STATS = [
   { value: "12+", label: "Établissements sélectionnés" },
 ] as const;
 
-const fadeUp = (delay: number) => ({
+type FadeUpProps = {
+  initial: { opacity: number; y: number };
+  animate: { opacity: number; y: number };
+  transition: Transition;
+};
+
+const fadeUp = (delay: number): FadeUpProps => ({
   initial: { opacity: 0, y: 30 },
   animate: { opacity: 1, y: 0 },
-  transition: {
-    duration: 0.9,
-    delay,
-    ease: [0.25, 0.46, 0.45, 0.94],
-  } as Transition,
+  transition: { duration: 0.9, delay, ease: [0.25, 0.46, 0.45, 0.94] },
 });
 
 export function HeroSection() {
   const t = useTranslations("hero");
-  const videoRef = useRef<HTMLVideoElement>(null);
 
   return (
     <section className="relative w-full h-screen min-h-[700px] overflow-hidden flex items-stretch">
 
       {/* ── Vidéo background ── */}
       <video
-        ref={videoRef}
         autoPlay
         loop
         muted
