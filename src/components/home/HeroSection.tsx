@@ -39,6 +39,7 @@ export function HeroSection({ onVideoReady }: HeroSectionProps) {
         poster="/assets/images/hero-fallback.jpg"
         className="absolute inset-0 w-full h-full object-cover"
         onCanPlayThrough={onVideoReady}
+        onLoadedData={onVideoReady}
       >
         <source src="/assets/videos/hero.mp4" type="video/mp4" />
       </video>

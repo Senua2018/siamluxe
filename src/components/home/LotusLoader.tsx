@@ -46,6 +46,15 @@ export function LotusLoader({ videoLoaded, onDismissed }: LotusLoaderProps) {
     return () => clearTimeout(t);
   }, [videoLoaded, onDismissed]);
 
+  // Safety fallback: always dismiss after 5s even if video never fires
+  useEffect(() => {
+    const t = setTimeout(() => {
+      setFading(true);
+      setTimeout(() => onDismissed?.(), 1200);
+    }, 5000);
+    return () => clearTimeout(t);
+  }, [onDismissed]);
+
   return (
     <div
       className="fixed inset-0 z-50 overflow-hidden grain-animated"
