@@ -39,7 +39,10 @@ export function HeroSection() {
       </video>
 
       {/* ── Overlay ── */}
-      <div className="absolute inset-0 bg-[rgba(26,14,8,0.30)]" />
+      <div className="absolute inset-0 bg-[rgba(10,6,3,0.42)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,rgba(10,6,3,0.38)_100%)]" />
+      <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[rgba(10,6,3,0.55)] to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-[rgba(10,6,3,0.60)] to-transparent" />
 
       {/* ── Coins dorés ── */}
       <div className="absolute top-4 left-4 w-7 h-7 border-t border-l border-[#C9A96E] z-10 sm:top-5 sm:left-5 sm:w-8 sm:h-8" />
