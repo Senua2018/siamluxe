@@ -4,6 +4,10 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { motion, type Transition } from "framer-motion";
 
+interface HeroSectionProps {
+  onVideoReady?: () => void;
+}
+
 const STAT_VALUES = ["Sukhumvit & Silom", "$40k → $150k", "+30%", "12+"] as const;
 const STAT_KEYS = ["zones", "price", "roi", "count"] as const;
 
@@ -19,7 +23,7 @@ const fadeUp = (delay: number): FadeUpProps => ({
   transition: { duration: 0.9, delay, ease: [0.25, 0.46, 0.45, 0.94] },
 });
 
-export function HeroSection() {
+export function HeroSection({ onVideoReady }: HeroSectionProps) {
   const t = useTranslations("hero");
 
   return (
@@ -34,6 +38,7 @@ export function HeroSection() {
         aria-hidden="true"
         poster="/assets/images/hero-fallback.jpg"
         className="absolute inset-0 w-full h-full object-cover"
+        onCanPlayThrough={onVideoReady}
       >
         <source src="/assets/videos/hero.mp4" type="video/mp4" />
       </video>
