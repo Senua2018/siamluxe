@@ -36,7 +36,7 @@ export function LotusSection() {
     <section
       ref={sectionRef}
       className="relative flex items-center overflow-hidden grain-animated"
-      style={{ minHeight: "100vh", background: "#2E1B12" }}
+      style={{ minHeight: "60vh", background: "#2E1B12" }}
     >
       <div className="relative z-10 w-full flex flex-col-reverse md:flex-row items-center px-8 md:px-16 lg:px-24 gap-12 md:gap-0 py-20 md:py-0">
 
