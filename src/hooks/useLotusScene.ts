@@ -14,7 +14,7 @@ export interface UseLotusSceneOptions {
 }
 
 export function useLotusScene(
-  canvasRef: RefObject<HTMLCanvasElement>,
+  canvasRef: RefObject<HTMLCanvasElement | null>,
   options: UseLotusSceneOptions = {}
 ) {
   const {
