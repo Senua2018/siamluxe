@@ -1,4 +1,4 @@
-import { Hero } from "@/components/home/Hero";
+import { HeroSection } from "@/components/home/HeroSection";
 import { TrustBanner } from "@/components/home/TrustBanner";
 import { FeaturedSalons } from "@/components/home/FeaturedSalons";
 import { WhyUs } from "@/components/home/WhyUs";
@@ -7,13 +7,21 @@ import { HowItWorks } from "@/components/home/HowItWorks";
 import { Gallery } from "@/components/home/Gallery";
 import { Testimonials } from "@/components/home/Testimonials";
 import { FinalCTA } from "@/components/home/FinalCTA";
+import { createClient } from "@/lib/supabase/server";
+import { getFeaturedSalons } from "@/lib/supabase/queries";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const supabase = await createClient();
+  const featured = (await getFeaturedSalons(supabase)).map((s) => ({
+    ...s,
+    photos: s.salon_photos,
+  }));
+
   return (
     <>
-      <Hero />
+      <HeroSection />
       <TrustBanner />
-      <FeaturedSalons />
+      <FeaturedSalons salons={featured} />
       <WhyUs />
       <ImmersiveQuote />
       <HowItWorks />
