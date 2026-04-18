@@ -1,5 +1,6 @@
 import { HeroWithLoader } from "@/components/home/HeroWithLoader";
 import { TrustBanner } from "@/components/home/TrustBanner";
+import { LotusSection } from "@/components/home/LotusSection";
 import { FeaturedSalons } from "@/components/home/FeaturedSalons";
 import { WhyUs } from "@/components/home/WhyUs";
 import { ImmersiveQuote } from "@/components/home/ImmersiveQuote";
@@ -20,6 +21,7 @@ export default async function HomePage() {
   return (
     <>
       <HeroWithLoader />
+      <LotusSection />
       <TrustBanner />
       <FeaturedSalons salons={featured} />
       <WhyUs />
