@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SiamLuxe
 
-## Getting Started
+Marketplace premium de salons de beaute a vendre a Bangkok. Site vitrine multilingue (FR/EN/RU) ciblant les expatries et investisseurs internationaux.
 
-First, run the development server:
+## Stack
+
+- **Framework** : Next.js 16 (App Router)
+- **Styling** : Tailwind CSS 4
+- **Animations** : GSAP (ScrollTrigger, parallax) + Framer Motion (transitions)
+- **Backend** : Supabase (PostgreSQL, Auth, Storage, RLS)
+- **i18n** : next-intl (fr, en, ru)
+- **Fonts** : Playfair Display, Cormorant Garamond, Montserrat
+- **Smooth Scroll** : Lenis
+- **Carousel** : Embla Carousel
+
+## Lancer en local
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvrir [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Variables d'environnement
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Creer un fichier `.env.local` :
 
-## Learn More
+```
+NEXT_PUBLIC_SUPABASE_URL=https://votre-projet.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=votre-anon-key
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Base de donnees
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Les migrations SQL sont dans `supabase/migrations/` :
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. `001_initial_schema.sql` — Tables (profiles, salons, salon_photos, favorites, contact_requests, testimonials)
+2. `002_rls_policies.sql` — Row Level Security
+3. `003_storage.sql` — Buckets photos et videos
+4. `004_seed_data.sql` — Donnees de demo (5 salons, 4 temoignages)
 
-## Deploy on Vercel
+## Deploiement Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Connecter le repo GitHub a Vercel
+2. Configurer les variables d'environnement Supabase dans les settings Vercel
+3. La region de deploiement est configuree sur Singapore (`sin1`) dans `vercel.json` pour la proximite avec Bangkok
+4. Vercel detecte automatiquement Next.js — aucune config build supplementaire requise
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Structure
+
+```
+src/
+  app/[locale]/        Pages (home, salons, about, contact, account, admin)
+  components/          Composants React (layout, home, salons, admin, ui, shared)
+  lib/                 Supabase clients, utilitaires, constantes, structured data
+  hooks/               Hooks custom (scroll reveal, favoris)
+  messages/            Traductions (fr.json, en.json, ru.json)
+  types/               Types TypeScript
+  styles/              CSS global + variables
+```

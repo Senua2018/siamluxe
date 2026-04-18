@@ -1,0 +1,175 @@
+{
+  "metadata": {
+    "title": "SiamLuxe — Beauty Salons for Sale in Bangkok",
+    "description": "Premium marketplace for beauty salons for sale in Bangkok. Find your turnkey salon: spa, massage, nails, hair."
+  },
+  "nav": {
+    "home": "Home",
+    "salons": "Salons",
+    "about": "About",
+    "contact": "Contact",
+    "viewSalons": "View salons",
+    "admin": "Admin",
+    "login": "Sign in",
+    "logout": "Sign out",
+    "myAccount": "My account",
+    "favorites": "Favorites"
+  },
+  "hero": {
+    "title": "Your Beauty Salon",
+    "titleHighlight": "in Bangkok",
+    "subtitle": "Discover our exclusive selection of beauty salons for sale in Bangkok's best districts. Turnkey, verified, ready for you.",
+    "cta": "Discover our salons",
+    "ctaSecondary": "Learn more"
+  },
+  "trust": {
+    "salonsAvailable": "Salons available",
+    "districtsAvailable": "Districts covered",
+    "nationalitiesServed": "Nationalities served",
+    "yearsExperience": "Years of experience"
+  },
+  "featured": {
+    "title": "Featured Salons",
+    "subtitle": "Our selection of the best current opportunities in Bangkok",
+    "viewAll": "View all salons",
+    "from": "From"
+  },
+  "whyUs": {
+    "title": "Why SiamLuxe",
+    "subtitle": "Your trusted partner for investing in beauty in Thailand",
+    "expertise": {
+      "title": "Local Expertise",
+      "description": "In-depth knowledge of Bangkok's beauty market and its strategic districts."
+    },
+    "multilingual": {
+      "title": "Multilingual Support",
+      "description": "Service in French, English and Russian for seamless communication."
+    },
+    "verified": {
+      "title": "Verified Selection",
+      "description": "Every salon is inspected and verified before being listed on our platform."
+    },
+    "legal": {
+      "title": "Legal Assistance",
+      "description": "Support with Thai legal and administrative procedures."
+    }
+  },
+  "immersive": {
+    "quote": "Bangkok, the world capital of wellness — A booming market where investing in beauty is a unique opportunity.",
+    "author": "SiamLuxe"
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Three simple steps to your new salon",
+    "step1": {
+      "title": "Browse",
+      "description": "Explore our catalog of beauty salons available in Bangkok, filter by district, type and budget."
+    },
+    "step2": {
+      "title": "Contact",
+      "description": "Get in direct touch with the seller via WhatsApp, LINE or email. We facilitate every exchange."
+    },
+    "step3": {
+      "title": "Visit",
+      "description": "Arrange an on-site visit, discover the salon and finalize your acquisition with confidence."
+    }
+  },
+  "testimonials": {
+    "title": "They Trust Us",
+    "subtitle": "Feedback from investors who found their salon through SiamLuxe"
+  },
+  "cta": {
+    "title": "Ready to invest?",
+    "subtitle": "Contact us today to discover available opportunities.",
+    "button": "Contact us"
+  },
+  "footer": {
+    "description": "Premium marketplace for beauty salons for sale in Bangkok. Your trusted partner for investing in wellness in Thailand.",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "legal": "Legal notice",
+    "privacy": "Privacy policy",
+    "terms": "Terms of service",
+    "rights": "All rights reserved."
+  },
+  "salon": {
+    "price": "Asking price",
+    "surface": "Floor area",
+    "district": "District",
+    "categories": "Categories",
+    "amenities": "Amenities",
+    "description": "Description",
+    "location": "Location",
+    "contact": "Contact seller",
+    "similar": "Similar listings",
+    "whatsapp": "WhatsApp",
+    "line": "LINE",
+    "email": "Email",
+    "featured": "Featured",
+    "sqm": "sqm",
+    "thb": "THB",
+    "rooms": "Treatment rooms",
+    "roomsShort": "rooms",
+    "monthlyRevenue": "Monthly revenue",
+    "monthlyRevenueShort": "Rev / mo",
+    "surfaceShort": "Floor area",
+    "estimatedRoi": "Estimated ROI",
+    "perYearShort": "yr",
+    "backToListings": "Back to listings",
+    "noPhoto": "No photo",
+    "addFavorite": "Add to favorites",
+    "removeFavorite": "Remove from favorites"
+  },
+  "filters": {
+    "filtersLabel": "Filters",
+    "category": "Type",
+    "district": "District",
+    "priceRange": "Price range",
+    "maxPrice": "Max budget",
+    "minSurface": "Min area",
+    "minRevenue": "Min monthly rev.",
+    "minRooms": "Min rooms",
+    "sortBy": "Sort by",
+    "newest": "Newest",
+    "priceAsc": "Price ascending",
+    "priceDesc": "Price descending",
+    "revenueDesc": "Revenue descending",
+    "surfaceDesc": "Area descending",
+    "all": "All",
+    "noResults": "No salons match your criteria.",
+    "resetFilters": "Reset filters",
+    "resultsSingular": "listing",
+    "resultsPlural": "listings",
+    "perMonthShort": "mo",
+    "roomsShort": "rooms"
+  },
+  "categories": {
+    "massage": "Massage",
+    "spa": "SPA",
+    "nails": "Nails",
+    "hair": "Hair salon",
+    "sauna": "Sauna",
+    "multi": "Multi-service"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Have a question? A project? Don't hesitate to reach out.",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message",
+    "preferredLanguage": "Preferred language",
+    "send": "Send",
+    "success": "Message sent successfully!",
+    "error": "Error sending message. Please try again."
+  },
+  "about": {
+    "title": "About SiamLuxe",
+    "subtitle": "Your gateway to beauty investment in Bangkok",
+    "mission": "Our Mission",
+    "missionText": "SiamLuxe connects international investors with the best beauty salon opportunities in Bangkok. Our multilingual team supports you from discovery to finalizing your acquisition.",
+    "whyBangkok": "Why Bangkok?",
+    "whyBangkokText": "Bangkok is the world capital of wellness. With over 22 million tourists per year and a thriving expat community, the demand for premium beauty services continues to grow.",
+    "faq": "Frequently Asked Questions"
+  }
+}

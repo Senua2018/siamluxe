@@ -1,26 +1,251 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --gold-primary: #C5975B;
+  --gold-light: #D4AF72;
+  --gold-dark: #8B6914;
+  --cream: #FDF8F0;
+  --brown-deep: #3D2B1F;
+  --brown-warm: #5C3D2E;
+  --white-soft: #FEFDFB;
+  --black-rich: #1A1209;
+  --text-primary: #2C1810;
+  --text-secondary: #6B5344;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-gold: var(--gold-primary);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+  --color-cream: var(--cream);
+  --color-brown-deep: var(--brown-deep);
+  --color-brown-warm: var(--brown-warm);
+  --color-white-soft: var(--white-soft);
+  --color-black-rich: var(--black-rich);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+
+  --font-display: var(--font-playfair);
+  --font-body: var(--font-cormorant);
+  --font-ui: var(--font-montserrat);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Global base styles */
+body {
+  background-color: var(--cream);
+  color: var(--text-primary);
+  font-family: var(--font-body), "Cormorant Garamond", Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth scroll via Lenis — html should not interfere */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Gold decorative separator */
+.gold-separator {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+  margin: 0 auto;
+}
+
+.gold-separator-wide {
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+  margin: 0 auto;
+}
+
+/* Luxury text gradient */
+.text-gold-gradient {
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold-primary), var(--gold-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Warm shadow utility */
+.shadow-warm {
+  box-shadow: 0 4px 20px rgba(60, 43, 31, 0.08);
+}
+
+.shadow-warm-lg {
+  box-shadow: 0 8px 40px rgba(60, 43, 31, 0.12);
+}
+
+/* Glassmorphism card effect */
+.glass-card {
+  background: rgba(253, 248, 240, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(197, 151, 91, 0.15);
+}
+
+/* Hide scrollbar for carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(197, 151, 91, 0.3);
+  color: var(--text-primary);
+}
+
+/* ===== Magic UI Animations ===== */
+
+/* ShimmerButton */
+@keyframes shimmer-slide {
+  to {
+    transform: translate(calc(100cqw - 100%), 0);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes spin-around {
+  0% {
+    transform: translateZ(0) rotate(0);
+  }
+  15%, 35% {
+    transform: translateZ(0) rotate(90deg);
+  }
+  65%, 85% {
+    transform: translateZ(0) rotate(270deg);
+  }
+  100% {
+    transform: translateZ(0) rotate(360deg);
+  }
+}
+
+.animate-shimmer-slide {
+  animation: shimmer-slide var(--shimmer-duration) ease-in-out infinite alternate;
+}
+
+.animate-spin-around {
+  animation: spin-around calc(var(--shimmer-duration) * 2) infinite linear;
+}
+
+/* BorderBeam */
+@keyframes border-beam {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+.animate-border-beam {
+  animation: border-beam var(--duration) infinite linear;
+}
+
+/* ShineBorder */
+@keyframes shine-pulse {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.animate-shine-pulse {
+  animation: shine-pulse var(--shine-pulse-duration) infinite linear;
+}
+
+/* Subtle float animation for decorative elements */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Grain texture overlay */
+.grain-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.3;
+  mix-blend-mode: overlay;
+}
+
+/* 3D relief card */
+.relief-card {
+  background: linear-gradient(145deg, rgba(253, 248, 240, 0.9), rgba(254, 253, 251, 0.95));
+  box-shadow:
+    6px 6px 16px rgba(60, 43, 31, 0.08),
+    -4px -4px 12px rgba(255, 255, 255, 0.9),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(197, 151, 91, 0.1);
+}
+
+.relief-card:hover {
+  box-shadow:
+    8px 8px 24px rgba(60, 43, 31, 0.12),
+    -4px -4px 12px rgba(255, 255, 255, 0.9),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* Embossed gold text */
+.text-embossed {
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.4),
+    0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Luxury divider with diamond */
+.luxury-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+}
+
+.luxury-divider::before,
+.luxury-divider::after {
+  content: "";
+  flex: 0 0 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-primary));
+}
+
+.luxury-divider::after {
+  background: linear-gradient(90deg, var(--gold-primary), transparent);
+}
+
+/* Inner shadow for depth */
+.inner-depth {
+  box-shadow:
+    inset 0 2px 4px rgba(60, 43, 31, 0.06),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.5);
 }

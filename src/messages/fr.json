@@ -1,0 +1,175 @@
+{
+  "metadata": {
+    "title": "SiamLuxe — Salons de Beauté à Vendre à Bangkok",
+    "description": "Marketplace premium de salons de beauté à vendre à Bangkok. Trouvez votre salon clé-en-main : spa, massage, ongles, coiffure."
+  },
+  "nav": {
+    "home": "Accueil",
+    "salons": "Salons",
+    "about": "À propos",
+    "contact": "Contact",
+    "viewSalons": "Voir les salons",
+    "admin": "Admin",
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "myAccount": "Mon compte",
+    "favorites": "Favoris"
+  },
+  "hero": {
+    "title": "Votre Salon de Beauté",
+    "titleHighlight": "à Bangkok",
+    "subtitle": "Découvrez notre sélection exclusive de salons de beauté à vendre dans les meilleurs quartiers de Bangkok. Clé-en-main, vérifiés, prêts à vous accueillir.",
+    "cta": "Découvrir nos salons",
+    "ctaSecondary": "En savoir plus"
+  },
+  "trust": {
+    "salonsAvailable": "Salons disponibles",
+    "districtsAvailable": "Quartiers couverts",
+    "nationalitiesServed": "Nationalités accompagnées",
+    "yearsExperience": "Années d'expérience"
+  },
+  "featured": {
+    "title": "Salons en Vedette",
+    "subtitle": "Notre sélection des meilleures opportunités actuelles à Bangkok",
+    "viewAll": "Voir tous les salons",
+    "from": "À partir de"
+  },
+  "whyUs": {
+    "title": "Pourquoi SiamLuxe",
+    "subtitle": "Votre partenaire de confiance pour investir dans la beauté en Thaïlande",
+    "expertise": {
+      "title": "Expertise Locale",
+      "description": "Une connaissance approfondie du marché de la beauté à Bangkok et de ses quartiers stratégiques."
+    },
+    "multilingual": {
+      "title": "Accompagnement Multilingue",
+      "description": "Service en français, anglais et russe pour une communication sans barrières."
+    },
+    "verified": {
+      "title": "Sélection Vérifiée",
+      "description": "Chaque salon est inspecté et vérifié avant d'être proposé sur notre plateforme."
+    },
+    "legal": {
+      "title": "Assistance Juridique",
+      "description": "Accompagnement dans les démarches légales et administratives thaïlandaises."
+    }
+  },
+  "immersive": {
+    "quote": "Bangkok, capitale mondiale du wellness — Un marché en pleine croissance où investir dans la beauté est une opportunité unique.",
+    "author": "SiamLuxe"
+  },
+  "howItWorks": {
+    "title": "Comment ça marche",
+    "subtitle": "Trois étapes simples vers votre nouveau salon",
+    "step1": {
+      "title": "Parcourez",
+      "description": "Explorez notre catalogue de salons de beauté disponibles à Bangkok, filtrez par quartier, type et budget."
+    },
+    "step2": {
+      "title": "Contactez",
+      "description": "Entrez en relation directe avec le vendeur via WhatsApp, LINE ou email. Nous facilitons chaque échange."
+    },
+    "step3": {
+      "title": "Visitez",
+      "description": "Organisez une visite sur place, découvrez le salon et finalisez votre acquisition en toute confiance."
+    }
+  },
+  "testimonials": {
+    "title": "Ils nous font confiance",
+    "subtitle": "Retours d'investisseurs qui ont trouvé leur salon grâce à SiamLuxe"
+  },
+  "cta": {
+    "title": "Prêt à investir ?",
+    "subtitle": "Contactez-nous dès aujourd'hui pour découvrir les opportunités disponibles.",
+    "button": "Nous contacter"
+  },
+  "footer": {
+    "description": "Marketplace premium de salons de beauté à vendre à Bangkok. Votre partenaire de confiance pour investir dans le wellness en Thaïlande.",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "legal": "Mentions légales",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "rights": "Tous droits réservés."
+  },
+  "salon": {
+    "price": "Prix",
+    "surface": "Surface",
+    "district": "Quartier",
+    "categories": "Catégories",
+    "amenities": "Équipements",
+    "description": "Description",
+    "location": "Emplacement",
+    "contact": "Contacter le vendeur",
+    "similar": "Biens similaires",
+    "whatsapp": "WhatsApp",
+    "line": "LINE",
+    "email": "Email",
+    "featured": "Vitrine",
+    "sqm": "m²",
+    "thb": "THB",
+    "rooms": "Pièces",
+    "roomsShort": "pcs",
+    "monthlyRevenue": "Revenu mensuel",
+    "monthlyRevenueShort": "CA / mois",
+    "surfaceShort": "Surface",
+    "estimatedRoi": "Rentabilité estimée",
+    "perYearShort": "an",
+    "backToListings": "Retour aux annonces",
+    "noPhoto": "Sans visuel",
+    "addFavorite": "Ajouter aux favoris",
+    "removeFavorite": "Retirer des favoris"
+  },
+  "filters": {
+    "filtersLabel": "Filtres",
+    "category": "Type",
+    "district": "Quartier",
+    "priceRange": "Fourchette de prix",
+    "maxPrice": "Budget max",
+    "minSurface": "Surface min",
+    "minRevenue": "CA mensuel min",
+    "minRooms": "Pièces min",
+    "sortBy": "Trier par",
+    "newest": "Plus récent",
+    "priceAsc": "Prix croissant",
+    "priceDesc": "Prix décroissant",
+    "revenueDesc": "CA décroissant",
+    "surfaceDesc": "Surface décroissante",
+    "all": "Tous",
+    "noResults": "Aucun salon ne correspond à vos critères.",
+    "resetFilters": "Réinitialiser les filtres",
+    "resultsSingular": "annonce",
+    "resultsPlural": "annonces",
+    "perMonthShort": "mois",
+    "roomsShort": "pcs"
+  },
+  "categories": {
+    "massage": "Massage",
+    "spa": "SPA",
+    "nails": "Ongles",
+    "hair": "Coiffure",
+    "sauna": "Sauna",
+    "multi": "Multi-services"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Une question ? Un projet ? N'hésitez pas à nous écrire.",
+    "name": "Nom",
+    "email": "Email",
+    "phone": "Téléphone",
+    "message": "Message",
+    "preferredLanguage": "Langue préférée",
+    "send": "Envoyer",
+    "success": "Message envoyé avec succès !",
+    "error": "Erreur lors de l'envoi. Veuillez réessayer."
+  },
+  "about": {
+    "title": "À propos de SiamLuxe",
+    "subtitle": "Votre passerelle vers l'investissement beauté à Bangkok",
+    "mission": "Notre Mission",
+    "missionText": "SiamLuxe connecte les investisseurs internationaux avec les meilleures opportunités de salons de beauté à Bangkok. Notre équipe multilingue vous accompagne de la découverte à la finalisation de votre acquisition.",
+    "whyBangkok": "Pourquoi Bangkok ?",
+    "whyBangkokText": "Bangkok est la capitale mondiale du wellness. Avec plus de 22 millions de touristes par an et une communauté d'expatriés florissante, la demande pour des services de beauté premium ne cesse de croître.",
+    "faq": "Questions fréquentes"
+  }
+}
