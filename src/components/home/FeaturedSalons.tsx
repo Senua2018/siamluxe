@@ -3,13 +3,16 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { ArrowRight } from "lucide-react";
-import { DEMO_SALONS } from "@/lib/demo-data";
+import type { Salon, SalonPhoto } from "@/types";
 import { SalonCard } from "@/components/salons/SalonCard";
 import { BlurFade } from "@/components/ui/blur-fade";
 
-export function FeaturedSalons() {
+type Props = {
+  salons: (Salon & { salon_photos: SalonPhoto[] })[];
+};
+
+export function FeaturedSalons({ salons }: Props) {
   const t = useTranslations("featured");
-  const featured = DEMO_SALONS.filter((s) => s.featured).slice(0, 4);
 
   return (
     <section className="py-20 sm:py-28 bg-cream">
@@ -31,7 +34,7 @@ export function FeaturedSalons() {
 
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-5">
-          {featured.map((salon, i) => (
+          {salons.map((salon, i) => (
             <BlurFade key={salon.id} delay={0.15 + i * 0.1} inView>
               <SalonCard salon={salon} />
             </BlurFade>

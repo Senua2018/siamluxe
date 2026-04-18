@@ -21,7 +21,13 @@
     "titleItalic": "Luxe",
     "subtitle": "Là où la tradition thaïe rencontre l'élégance moderne",
     "cta": "Découvrir le Sanctuaire",
-    "explore": "Explorer"
+    "explore": "Explorer",
+    "stats": {
+      "zones": "Cœur de Bangkok · Zones premium",
+      "price": "Prix d'entrée · Business clé en main",
+      "roi": "ROI annuel moyen constaté",
+      "count": "Établissements sélectionnés"
+    }
   },
   "trust": {
     "salonsAvailable": "Salons disponibles",

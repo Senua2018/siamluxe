@@ -4,12 +4,8 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { motion, type Transition } from "framer-motion";
 
-const STATS = [
-  { value: "Sukhumvit & Silom", label: "Cœur de Bangkok · Zones premium" },
-  { value: "$40k → $150k", label: "Prix d'entrée · Business clé en main" },
-  { value: "+30%", label: "ROI annuel moyen constaté" },
-  { value: "12+", label: "Établissements sélectionnés" },
-] as const;
+const STAT_VALUES = ["Sukhumvit & Silom", "$40k → $150k", "+30%", "12+"] as const;
+const STAT_KEYS = ["zones", "price", "roi", "count"] as const;
 
 type FadeUpProps = {
   initial: { opacity: number; y: number };
@@ -35,6 +31,7 @@ export function HeroSection() {
         loop
         muted
         playsInline
+        aria-hidden="true"
         poster="/assets/images/hero-fallback.jpg"
         className="absolute inset-0 w-full h-full object-cover"
       >
@@ -92,17 +89,17 @@ export function HeroSection() {
 
           {/* Stats — grille 2×2 sur mobile, liste sur desktop */}
           <div className="grid grid-cols-2 gap-x-6 gap-y-5 md:flex md:flex-col md:gap-5 mb-8">
-            {STATS.map((stat, i) => (
+            {STAT_KEYS.map((key, i) => (
               <motion.div
-                key={stat.value}
+                key={key}
                 {...fadeUp(0.8 + i * 0.1)}
                 className="border-l border-[rgba(201,169,110,0.5)] pl-3 md:pl-4"
               >
                 <div className="font-[var(--font-josefin)] font-[100] text-[18px] md:text-[26px] text-[#C9A96E] leading-tight mb-1">
-                  {stat.value}
+                  {STAT_VALUES[i]}
                 </div>
                 <div className="font-[var(--font-josefin)] font-[300] text-[8px] md:text-[9px] tracking-[0.22em] uppercase text-[rgba(253,250,245,0.45)] leading-snug">
-                  {stat.label}
+                  {t(`stats.${key}`)}
                 </div>
               </motion.div>
             ))}

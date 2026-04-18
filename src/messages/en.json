@@ -21,7 +21,13 @@
     "titleItalic": "Luxe",
     "subtitle": "Where Thai tradition meets modern refinement",
     "cta": "Discover the Sanctuary",
-    "explore": "Explore"
+    "explore": "Explore",
+    "stats": {
+      "zones": "Heart of Bangkok · Premium districts",
+      "price": "Entry price · Turnkey business",
+      "roi": "Average annual ROI observed",
+      "count": "Curated establishments"
+    }
   },
   "trust": {
     "salonsAvailable": "Salons available",
