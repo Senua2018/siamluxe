@@ -16,11 +16,12 @@
     "favorites": "Favorites"
   },
   "hero": {
-    "title": "Your Beauty Salon",
-    "titleHighlight": "in Bangkok",
-    "subtitle": "Discover our exclusive selection of beauty salons for sale in Bangkok's best districts. Turnkey, verified, ready for you.",
-    "cta": "Discover our salons",
-    "ctaSecondary": "Learn more"
+    "eyebrow": "Bangkok · Luxury Beauty Investment",
+    "title": "Siam",
+    "titleItalic": "Luxe",
+    "subtitle": "Where Thai tradition meets modern refinement",
+    "cta": "Discover the Sanctuary",
+    "explore": "Explore"
   },
   "trust": {
     "salonsAvailable": "Salons available",

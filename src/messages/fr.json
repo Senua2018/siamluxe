@@ -16,11 +16,12 @@
     "favorites": "Favoris"
   },
   "hero": {
-    "title": "Votre Salon de Beauté",
-    "titleHighlight": "à Bangkok",
-    "subtitle": "Découvrez notre sélection exclusive de salons de beauté à vendre dans les meilleurs quartiers de Bangkok. Clé-en-main, vérifiés, prêts à vous accueillir.",
-    "cta": "Découvrir nos salons",
-    "ctaSecondary": "En savoir plus"
+    "eyebrow": "Bangkok · Investissement Beauté Luxe",
+    "title": "Siam",
+    "titleItalic": "Luxe",
+    "subtitle": "Là où la tradition thaïe rencontre l'élégance moderne",
+    "cta": "Découvrir le Sanctuaire",
+    "explore": "Explorer"
   },
   "trust": {
     "salonsAvailable": "Salons disponibles",
